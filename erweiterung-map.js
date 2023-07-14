@@ -6,7 +6,7 @@ class land {
         this.erweiterung=erweiterung;
     }
 }
-
+const test=0;
 const landArray=[
  fr = new land ("Frankreich","frankreich", "fr2","gruender"),
  de = new land ("Deutschland","deutschland", "de2","gruender"),
