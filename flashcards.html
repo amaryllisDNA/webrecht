@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="flashcards.css">
+    <link rel="stylesheet" href="general.css">
+</head>
+ <header id="navbar">
+        <div class="heading-part">
+            <h1><a href="index.html">Keep up the hustle</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="open"><a href="semesters.html">Semesters &ensp;</a>
+                    <ul>
+                        <li class="under"><a href="somsem-2023.html">Sommersemester 2023</a></li>
+                    </ul>
+                </li>
+                <li class="open"><a href="vorlesungen.html">Vorlesungen &ensp;</a>
+                    <ul>
+                        <li class="under"><a href="mda.html">MDA</a></li>
+                        <li class="under"><a href="pol-psy.html">Politische Psychologie</a></li>
+                        <li class="under"><a href="eu-recht.html">EU-Recht</a></li>
+                        <li class="under"><a href="pol-theorie.html">Einführung in die Politische Theorie</a></li>
+                        <li class="under"><a href="soz-theorien.html">Soziologische Theorien</a></li>
+                        <li class="under"><a href="qualitative-methoden.html">Qualitative Methoden der Forschunng</a></li>
+                        <li class="under"><a href="gruppendisk.html">Gruppendiskussion</a></li>
+                    </ul>
+                </li>
+                <li class="open"><a href="mindmaps.html">Mind Maps</a></li>
+                <li class="open"><a href="flashcards.html">Flashcards</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <body>
+        <main>
+            <div id="general-container">            
+                <button id="add-flash-button">Add a flashcard</button> 
+                <div id="cards-display"></div>
+            </div>
+                
+            
+
+            <div id="flashcard-editor" class="hide">                
+                <h2>Card editor</h2>
+                <div class="container-inputs">
+                    <label for="question">Question: </label>
+                    <textarea class="input"  id="question" placeholder="type your question..." rows="2"></textarea>
+                    <label for="answer">Answer: </label>
+                    <textarea class="input" id="answer" placeholder="type your answer" rows="4"></textarea>
+                    <div class="container-editor">
+                    <button id="cancel-button">Cancel</button>
+                    <p class="error-message hide">Both fields should contain information.</p>
+                </div>
+                
+                </div>
+                    <button id="submit-button">Submit</button>
+            </div>
+            
+
+            <script src="flashcards.js"></script>
+        </main>
+
+
+    </body>
+</html>
