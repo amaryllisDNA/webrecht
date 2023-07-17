@@ -200,8 +200,6 @@ a{
 }.comparator .right{
     grid-area: compare-right;
     border-left:2px solid rgb(175, 164, 214)
-}.article{
-    padding:1vh
 }#compare-art-1{
     grid-area:article-1;
     border-right:2px solid rgb(212, 173, 138)
@@ -240,6 +238,7 @@ a{
     background-color: rgb(248, 247, 236);
     color:rgb(88, 40, 17);
     font-size: 70%;
+    padding:1vh
 }.comparator ul .insist{
     font-size:150% ;
     color: rgb(65, 40, 166);
@@ -266,15 +265,34 @@ a{
 
 #LUXEMBOURG
 
-#gerichtshof-eu-rechnungshof.comparator{
-
-}#gerichtshof-eu-rechnungshof .left{
-
+#gerichtshof-eu-rechnungshof .left{
     grid-area: lefthalf;
     border-right: 2px solid rgb(175, 164, 214);
+    margin-top: 1vh 
     ;
 }#gerichtshof-eu-rechnungshof .right{
-    grid-area: compare-right;
+    grid-area: righthalf;
+    border-left:  2px solid rgb(175, 164, 214) ;
+    margin :0 
+}#gerichtshof-eu-rechnungshof .left li, #gerichtshof-eu-rechnungshof .right li, #gerichtshof-eu-rechnungshof .precision{
+    margin-left: 5vh;
+}
+#gerichtshof-eu-rechnungshof h5{
+    margin-left: 2vh;
+    margin-top:1vh
+}
+#gerichtshof-eu-rechnungshof h3{
+    text-align: center;
+    margin-top: 1vh;
+}#art-eurh{
+    grid-area: article2;
+    border-left: 2px solid rgb(212, 173, 138) !important;
+}#art-eugh{
+    grid-area: article1;
+}
+
+#ezb .article{
+    margin: 3vh 6vh
 }
 
 
