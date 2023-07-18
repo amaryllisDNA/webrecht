@@ -19,9 +19,18 @@ main{
     margin:0 auto !important;
     background-color: rgb(237, 234, 252);}
 
-
 a{
     cursor: pointer;
+}
+
+/*ENTWICKLUNG*/
+
+.quote{
+    margin:3vh;
+    font-size: 125%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(90deg,rgba(255,255,255,0.1),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.5),rgba(255,255,255,0.4),rgba(255,255,255,0.3),rgba(255,255,255,0.1));
+    text-align: center;
 }
 
 .mindmap{
@@ -276,12 +285,10 @@ a{
     margin :0 
 }#gerichtshof-eu-rechnungshof .left li, #gerichtshof-eu-rechnungshof .right li, #gerichtshof-eu-rechnungshof .precision{
     margin-left: 5vh;
-}
-#gerichtshof-eu-rechnungshof h5{
+}#gerichtshof-eu-rechnungshof h5{
     margin-left: 2vh;
     margin-top:1vh
-}
-#gerichtshof-eu-rechnungshof h3{
+}#gerichtshof-eu-rechnungshof h3{
     text-align: center;
     margin-top: 1vh;
 }#art-eurh{
@@ -291,12 +298,36 @@ a{
     grid-area: article1;
 }
 
+/*FRANKFURT*/
 #ezb .article{
     margin: 3vh 6vh
 }
 
 
-
+/*PRINZIPIEN EU*/
+#rechtprinzipien{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:80%;
+    margin:auto
+}#rechtprinzipien h4{
+    margin: auto;
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 68%;
+}#rechtprinzipien .explain{
+    text-align: left;
+    margin:1vh;
+    font-size: 65%;
+}#rechtprinzipien div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    border:1px dotted;
+    margin:2vh 0.5vh;
+    width:25%
+}
 
 
 

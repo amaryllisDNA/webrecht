@@ -4,6 +4,9 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.inline-title{
+    font-size:130%    
+}
 
 h1 a{
     text-decoration: none;
