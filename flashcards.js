@@ -1,23 +1,30 @@
+class flashcard {
+  constructor(question, answer, semester, fach){
+      this.question=question;
+      this.answer=answer;
+      this.semester=semester;
+      this.fach=fach
+  }
+}
+
 const generalContainer = document.getElementById("general-container");
 const addFlashButton  = document.getElementById("add-flash-button");
-const cardDisplay = document.getElementById("cards-display");
-const flashEditor = document.getElementById("flashcard-editor");
-const cancelButton = document.getElementById("cancel-button");
-const errorMessage = document.querySelector(".error-message");
-const question = document.getElementById("question");
-const answer = document.getElementById("answer");
-const submitButton = document.getElementById("submit-button")
+let cardDisplay = document.getElementById("cards-display");
+let flashEditor = document.getElementById("flashcard-editor");
+let cancelButton = document.getElementById("cancel-button");
+let errorMessage = document.querySelector(".error-message");
+let question = document.getElementById("question");
+let answer = document.getElementById("answer");
+let submitButton = document.getElementById("submit-button")
 let editing = false;
-var listAnswerQuestionString = localStorage.getItem("listAnswerQuestion");
-var listAnswerQuestion=[];
-var listAnswerQuestion=JSON.parse(listAnswerQuestionString);
-var question_card=[];
-var answer_card=[];    
+
+let listFlashcardsString = localStorage.getItem("arrayFlashcards") ;
+let listFlashcards= JSON.parse(listFlashcardsString)
 
 function localStorageCards() {
-  for (var i = 0; i < listAnswerQuestion.length; i++) {
-    question_card = listAnswerQuestion[i][0];
-    answer_card = listAnswerQuestion[i][1];
+  for (var i = 0; i < listFlashcards.length; i++) {
+    question_card = listFlashcards[i].question;
+    answer_card = listFlashcards[i].answer;
     generateCard();
   }
 }  
@@ -56,10 +63,10 @@ submitButton.addEventListener (
       flashEditor.classList.add("hide");      
       cardDisplay.classList.remove("hide");
       let setQuestionAnswer = [tempQuestion, tempAnswer];
-      listAnswerQuestion.unshift(setQuestionAnswer);
+      listFlashcards.unshift(new flashcard(tempQuestion, tempAnswer));
       
-      listAnswerQuestionString = JSON.stringify(listAnswerQuestion);
-      localStorage.setItem("listAnswerQuestion", listAnswerQuestionString);
+      listFlashcardsString = JSON.stringify(listFlashcards);
+      localStorage.setItem("arrayFlashcards", listFlashcardsString);
       question_card=question.value;
       answer_card=answer.value;
       generateCard();
@@ -116,20 +123,20 @@ submitButton.addEventListener (
           answer.value =parentAnswer;
           question.value = parentQuestion;        
         } 
-        var filteredArray = listAnswerQuestion.filter(function(subArray) {
-          return subArray.includes(parentQuestion);
-        });
-        console.log(filteredArray)
-        for (var i = 0; i < filteredArray.length; i++) {
-          var index = listAnswerQuestion.indexOf(filteredArray[i]);
-          if (index !== -1) {
-            listAnswerQuestion.splice(index, 1);
+
+        for (i=0;i<listFlashcards.length;i++){
+          let search=parentQuestion;
+          if(listFlashcards[i].question == search){
+              index=i;
+              listFlashcards.splice(index, 1);
+              }
           }
-        }
+      
+
         
-        console.log(listAnswerQuestion);
-        listAnswerQuestionString = JSON.stringify(listAnswerQuestion);
-        localStorage.setItem("listAnswerQuestion", listAnswerQuestionString);
+        console.log(listFlashcards);
+        listFlashcardsString = JSON.stringify(listFlashcards);
+        localStorage.setItem("arrayFlashcards", listFlashcardsString);
         console.log(localStorage);
         parentDiv.remove()
       }
@@ -162,12 +169,5 @@ submitButton.addEventListener (
     deleteYes.addEventListener("click", ()=>{
       modifyElement(deleteButton);
     } )   
-  
-
-
   }
-  
 
-
-
-    

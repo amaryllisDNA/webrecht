@@ -6,6 +6,7 @@
     <title>Qualitative Sozialforschung</title>
     <link rel="stylesheet" href="quali.css">
     <link rel="stylesheet" href="general.css">
+    <script href="quali-show.js"></script> 
 </head>
 <body>
     <header id="navbar">
@@ -43,14 +44,24 @@
             <p>Es ist wichtig die Hauptpünkte über Qualitative Sozialforschung erstmal zu erinnern.</p>
             <div class="grid-container">
                 <p class="grid-title">Hier die Hauptschritte in Qualiforschung</p>
-                <div class="grid-item">Question 1</div>
-                <div class="hide grid-item answer-show">Réponse 1</div>
-                <div class="grid-item">Question 2</div>
-                <div class="hide grid-item answer-show">Réponse 2</div>
-                <div class="grid-item">Question 3</div>
-                <div class="hide grid-item answer-show">Réponse 3</div>
-                <div class="grid-item">Question 4</div>
-                <div class="hide grid-item answer-show">Réponse 4</div>
+                <div class="question-answer">
+                    <div class="grid-item question-show" onmouseover="showQuestion">Formulierung des Erkenntnisinteresses und der Fragestellung</div>
+                    <div class="hide grid-item answer-show">Was will ich wissen ?</div>
+                </div>
+                <div class="question-answer">
+                    <div class="grid-item question-show" onmouseover="showQuestion">Methodologische Positionierung </div>
+                    <div class="hide grid-item answer-show">Welches methodologische Paradigma it meiner Fragestellung angemessen und welche Konsequenzen folgen daraus ?</div>
+                <div class="question-answer">
+                    <div class="grid-item question-show" onmouseover="showQuestion">Bestimmung des Forschungsfeldes</div>
+                    <div class="hide grid-item answer-show">Wo und von wem erfahre ich am ehestens etwas über das, was ich wissen will ?</div>
+                <div class="question-answer">
+                    <div class="grid-item question-show" onmouseover="showQuestion">Wahl der Erhebungsverfahren</div>
+                    <div class="hide grid-item answer-show">Réponse 1</div>
+                </div>
+                <div class="question-answer">
+                    <div class="grid-item question-show" onmouseover="showQuestion">Wahl der Auswertungsverfahren</div>
+                    <div class="hide grid-item answer-show">Welche Art der Auswertung ist aufgrund der erhobenen Daten möglich und diesen Daten angemessen?</div>
+                </div>
             </div>
         </section>
 
